@@ -6,16 +6,48 @@ public class Obtacles_Movement : MonoBehaviour
 {
     public float _speed;
     public float _maxDistance;
+    Vector3 movementDirection;
+    Vector3 spawnPoint;
+    bool isLeft;
+
+
     private void FixedUpdate()
     {
-        transform.Translate(Vector3.back * _speed * Time.deltaTime);
+        transform.Translate(movementDirection * _speed * Time.deltaTime);
+
+        
+        // Distruggi l'oggetto se supera una certa distanza
+        if (isLeft) {
+            if (transform.position.z > 10f) {
+                Destroy(gameObject);
+            }
+        }
+        else 
+        {
+            if (transform.position.z < -10f) {
+                Destroy(gameObject);
+            }
+        }
+        
     }
 
-    private void Update()
+
+
+    public void SetMovementDirection(bool moveToLeft, Vector3 init)
     {
-        if (transform.position.z < -_maxDistance)
-        {
-            Destroy(gameObject);
+        spawnPoint = init;
+        isLeft = moveToLeft;
+
+        if (moveToLeft) {
+            movementDirection = new Vector3(0, 0 , 1);
         }
+        else {
+            movementDirection = new Vector3(0, 0, -1);
+        }
+    }
+
+    public void SetMovementSpeed(float movSpeed)
+    {
+        _speed = movSpeed;
     }
 }
