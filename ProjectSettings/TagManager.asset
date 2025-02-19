@@ -6,6 +6,7 @@ TagManager:
   tags:
   - cam_accellerator
   - Ground
+  - Coin
   layers:
   - Default
   - TransparentFX
