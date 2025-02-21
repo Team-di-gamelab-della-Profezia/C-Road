@@ -276,7 +276,7 @@ GameObject:
   - component: {fileID: 150089248}
   - component: {fileID: 150089247}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Settings
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
