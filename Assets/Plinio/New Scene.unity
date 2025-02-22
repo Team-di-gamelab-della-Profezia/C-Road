@@ -119,11 +119,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!23 &517533465 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 1072922706577997254, guid: cfd1e84dcd7e0374e92ae21253c3873e, type: 3}
-  m_PrefabInstance: {fileID: 1306194722}
-  m_PrefabAsset: {fileID: 0}
 --- !u!23 &793008818 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 1072922706577997254, guid: cfd1e84dcd7e0374e92ae21253c3873e, type: 3}
@@ -239,30 +234,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1761875617716022679, guid: cfd1e84dcd7e0374e92ae21253c3873e, type: 3}
-      propertyPath: laneRenderer
-      value: 
-      objectReference: {fileID: 517533465}
-    - target: {fileID: 1761875617716022679, guid: cfd1e84dcd7e0374e92ae21253c3873e, type: 3}
-      propertyPath: laneMaterials.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1761875617716022679, guid: cfd1e84dcd7e0374e92ae21253c3873e, type: 3}
-      propertyPath: 'laneMaterials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 849a7a48052d8cb4ba4d48486958109d, type: 2}
-    - target: {fileID: 1761875617716022679, guid: cfd1e84dcd7e0374e92ae21253c3873e, type: 3}
-      propertyPath: 'laneMaterials.Array.data[1]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 77f1bc36457e0e640a8d91b2bb4a3224, type: 2}
-    - target: {fileID: 1761875617716022679, guid: cfd1e84dcd7e0374e92ae21253c3873e, type: 3}
-      propertyPath: 'laneMaterials.Array.data[2]'
-      value: 
-      objectReference: {fileID: 2100000, guid: efc4394501b2ab640898afea664fd22a, type: 2}
-    - target: {fileID: 1761875617716022679, guid: cfd1e84dcd7e0374e92ae21253c3873e, type: 3}
-      propertyPath: 'laneMaterials.Array.data[3]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 934465631c3216d47b46f4a15f82b6c3, type: 2}
     - target: {fileID: 3485404595483249624, guid: cfd1e84dcd7e0374e92ae21253c3873e, type: 3}
       propertyPath: m_Name
       value: Lane
@@ -306,10 +277,6 @@ PrefabInstance:
     - target: {fileID: 7381740613659570332, guid: cfd1e84dcd7e0374e92ae21253c3873e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8773216440763439343, guid: cfd1e84dcd7e0374e92ae21253c3873e, type: 3}
-      propertyPath: m_Name
-      value: Terrain
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -510,6 +477,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1761875617716022679, guid: cfd1e84dcd7e0374e92ae21253c3873e, type: 3}
+      propertyPath: spawnToLeft
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1761875617716022679, guid: cfd1e84dcd7e0374e92ae21253c3873e, type: 3}
       propertyPath: laneRenderer
       value: 
       objectReference: {fileID: 1967352538}
@@ -602,6 +573,10 @@ PrefabInstance:
     - target: {fileID: 1761875617716022679, guid: cfd1e84dcd7e0374e92ae21253c3873e, type: 3}
       propertyPath: myLaneType
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1761875617716022679, guid: cfd1e84dcd7e0374e92ae21253c3873e, type: 3}
+      propertyPath: spawnToLeft
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1761875617716022679, guid: cfd1e84dcd7e0374e92ae21253c3873e, type: 3}
       propertyPath: laneRenderer
