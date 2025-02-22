@@ -6,11 +6,8 @@ TagManager:
   tags:
   - cam_accellerator
   - Ground
-<<<<<<< Updated upstream
-=======
   - Coin
-  - ObstacleDestroyer
->>>>>>> Stashed changes
+  - UI
   layers:
   - Default
   - TransparentFX
