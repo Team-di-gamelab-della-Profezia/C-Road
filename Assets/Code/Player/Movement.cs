@@ -8,12 +8,14 @@ public class Movement : MonoBehaviour
     private Vector3 startPosition;
 
     private Scoring scoreScript;
+    LaneManager laneManager;
 
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        laneManager = FindAnyObjectByType<LaneManager>();
         scoreScript = gameObject.GetComponent<Scoring>();
 
         startPosition = transform.position;
@@ -23,6 +25,7 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        #region Inputs
         if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.Space))
         {
             Move(Vector3.left, true);
@@ -39,6 +42,7 @@ public class Movement : MonoBehaviour
         {
             Move(Vector3.forward, false);
         }
+        #endregion
     }
 
     void Move(Vector3 direction, bool checkScore)
@@ -46,10 +50,13 @@ public class Movement : MonoBehaviour
         transform.position += direction * moveDistance;
         transform.position = Vector3.Lerp(transform.position, transform.position + direction * moveDistance, moveSpeed * Time.deltaTime);
 
-        if (checkScore && transform.position.z > maxDistanceReached)
+        if (checkScore && transform.position.x < maxDistanceReached)
         {
             maxDistanceReached = transform.position.z;
             scoreScript.UpdateScore();
+
+
+            laneManager.CreateLane(gameObject.transform.position);
         }
     }
 }

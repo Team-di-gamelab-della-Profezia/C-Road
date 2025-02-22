@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 2478678572505748908}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 10}
+  m_LocalPosition: {x: 0, y: 0, z: 10}
   m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -158,18 +158,18 @@ MonoBehaviour:
   spawnPoints:
   - {fileID: 8346178379586670514}
   - {fileID: 2478678572505748908}
+  myLaneType: 0
   objectsToSpawn:
   - {fileID: 4942730595809365403, guid: dbbd2fce770567b49a2bfd89ec88c938, type: 3}
-  myLaneType: 0
   spawnToLeft: 1
   spawnInterval: 2
   laneSpeed: 10
+  laneRenderer: {fileID: 1072922706577997254}
   laneMaterials:
   - {fileID: 2100000, guid: 849a7a48052d8cb4ba4d48486958109d, type: 2}
   - {fileID: 2100000, guid: 77f1bc36457e0e640a8d91b2bb4a3224, type: 2}
   - {fileID: 2100000, guid: efc4394501b2ab640898afea664fd22a, type: 2}
   - {fileID: 2100000, guid: 934465631c3216d47b46f4a15f82b6c3, type: 2}
-  laneRenderer: {fileID: 1072922706577997254}
 --- !u!1 &8346178379586670514
 GameObject:
   m_ObjectHideFlags: 0
@@ -198,7 +198,7 @@ Transform:
   m_GameObject: {fileID: 8346178379586670514}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -306,8 +306,8 @@ Transform:
   m_GameObject: {fileID: 8773216440763439343}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5, y: 1, z: 20}
+  m_LocalPosition: {x: 0, y: -0.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 20}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7381740613659570332}
