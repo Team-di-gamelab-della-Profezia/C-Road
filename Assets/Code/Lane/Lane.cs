@@ -2,15 +2,17 @@ using UnityEngine;
 using System.Collections;
 using TMPro;
 
+[HideInInspector] public enum laneType { grass, dirt, lava, water };
+
+
 public class Lane : MonoBehaviour
 {
-    [HideInInspector] public enum laneType {grass, dirt, lava, water};
 
-    [InspectorName("References")]
+    [Header("References")]
     public GameObject[] spawnPoints;
 
     [Space(20)]
-    [InspectorName("Variables")]
+    [Header("Variables")]
     public laneType myLaneType = laneType.grass;
     public GameObject[] objectsToSpawn;
     public bool spawnToLeft = true;
@@ -18,7 +20,7 @@ public class Lane : MonoBehaviour
     public float laneSpeed = 5f;
 
     [Space(20)]
-    [InspectorName("Materials")]
+    [Header("Materials")]
     public MeshRenderer laneRenderer;
     public Material[] laneMaterials;
 
