@@ -3,7 +3,7 @@ using TMPro;
 
 public class CoinScore : MonoBehaviour
 {
-    public TMP_Text scoreText; // Riferimento al testo TMP
+    public TMP_Text coinText; // Riferimento al testo TMP
     private int score = 0;
 
     private void Start()
@@ -26,9 +26,9 @@ public class CoinScore : MonoBehaviour
 
     void UpdateScore()
     {
-        if (scoreText != null)
+        if (coinText != null)
         {
-            scoreText.text = "Score: " + score;
+            coinText.text = "Coin/s: " + score;
         }
     }
 
