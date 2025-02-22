@@ -4,18 +4,31 @@ using TMPro;
 
 public class LaneManager : MonoBehaviour
 {
+    [HideInInspector] public enum laneType {grass, dirt, lava, water};
+
+    [InspectorName("References")]
     public GameObject[] spawnPoints;
-    public GameObject[] objectsToSpawn;
 
     [Space(20)]
+    [InspectorName("Variables")]
+    public laneType myLaneType = laneType.grass;
+    public GameObject[] objectsToSpawn;
     public bool spawnToLeft = true;
     public float spawnInterval = 1.5f;
     public float laneSpeed = 5f;
 
+    [Space(20)]
+    [InspectorName("Materials")]
+    public MeshRenderer laneRenderer;
+    public Material[] laneMaterials;
+
+
+    
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        laneRenderer.material = laneMaterials[(int)myLaneType];
         StartCoroutine("SpawnWithInterval");
     }
 

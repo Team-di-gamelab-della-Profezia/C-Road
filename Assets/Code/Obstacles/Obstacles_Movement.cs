@@ -7,7 +7,7 @@ public class Obtacles_Movement : MonoBehaviour
     public float _speed;
     public float _maxDistance;
     Vector3 movementDirection;
-    Vector3 spawnPoint;
+    public Vector3 spawnPoint;
     bool isLeft;
 
 
@@ -15,20 +15,21 @@ public class Obtacles_Movement : MonoBehaviour
     {
         transform.Translate(movementDirection * _speed * Time.deltaTime);
 
-        
         // Distruggi l'oggetto se supera una certa distanza
-        if (isLeft) {
-            if (transform.position.z > 10f) {
-                Destroy(gameObject);
-            }
-        }
-        else 
+        if (isLeft)
         {
-            if (transform.position.z < -10f) {
+            if (transform.position.z > spawnPoint.z)
+            {
                 Destroy(gameObject);
             }
         }
-        
+        else
+        {
+            if (transform.position.z < spawnPoint.z)
+            {
+                Destroy(gameObject);
+            }
+        }
     }
 
 
