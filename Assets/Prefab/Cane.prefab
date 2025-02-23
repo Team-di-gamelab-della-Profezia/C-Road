@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6438951394377106512}
   - component: {fileID: 8591900890389197609}
+  - component: {fileID: 8467431002158669639}
+  - component: {fileID: 1807979701466414869}
   m_Layer: 0
   m_Name: Cane
   m_TagString: Untagged
@@ -55,6 +57,33 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!114 &8467431002158669639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2070118920789648401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0aaa5a82eecfef547851c0aa46c95aae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 0
+  _maxDistance: 0
+  spawnPoint: {x: 0, y: 0, z: 0}
+--- !u!114 &1807979701466414869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2070118920789648401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6a55a4064ea8bc40b1360ee25caec3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1038493244688424457
 PrefabInstance:
   m_ObjectHideFlags: 0
