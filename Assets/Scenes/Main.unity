@@ -723,17 +723,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!114 &1341355315 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5353720318504765339, guid: b02743b54611da5479ab24619fdbcfdc, type: 3}
-  m_PrefabInstance: {fileID: 4856248508910349665}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a343e8dc80e020d4c9753b241f20c49e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1422793792
 GameObject:
   m_ObjectHideFlags: 0
@@ -1284,6 +1273,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5353720318504765339, guid: b02743b54611da5479ab24619fdbcfdc, type: 3}
+      propertyPath: laneSpeedRange.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5353720318504765339, guid: b02743b54611da5479ab24619fdbcfdc, type: 3}
+      propertyPath: laneSpeedRange.y
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7101272783901099244, guid: b02743b54611da5479ab24619fdbcfdc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1393,10 +1390,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Remi
       objectReference: {fileID: 0}
-    - target: {fileID: 7254030432833178380, guid: ec5f5e4f8983a0649930c8a94f6ab56e, type: 3}
-      propertyPath: laneManager
-      value: 
-      objectReference: {fileID: 1341355315}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

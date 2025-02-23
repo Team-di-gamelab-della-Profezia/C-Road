@@ -2,12 +2,12 @@ using UnityEngine;
 using UnityEngine.PlayerLoop;
 using UnityEngine.UIElements;
 
-public class Obtacles_Movement : MonoBehaviour
+public class ObjectMovement : MonoBehaviour
 {
-    public float _speed;
-    public float _maxDistance;
+    [HideInInspector] public float _speed;
+    [HideInInspector] public float _maxDistance;
     Vector3 movementDirection;
-    public Vector3 spawnPoint;
+    [HideInInspector] public Vector3 spawnPoint;
     bool isLeft;
 
 
@@ -43,7 +43,7 @@ public class Obtacles_Movement : MonoBehaviour
             movementDirection = new Vector3(0, 0 , 1);
         }
         else {
-            movementDirection = new Vector3(0, 0, -1);
+            movementDirection = new Vector3(0, 0, 1);
         }
     }
 
