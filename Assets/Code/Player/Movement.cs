@@ -8,7 +8,7 @@ public class Movement : MonoBehaviour
     private Vector3 startPosition;
 
     private Scoring scoreScript;
-    LaneManager laneManager;
+    public LaneManager laneManager;
 
 
 
@@ -46,7 +46,7 @@ public class Movement : MonoBehaviour
         #endregion
     }
 
-    void Move(Vector3 direction, bool checkScore)
+   public void Move(Vector3 direction, bool checkScore)
     {
         transform.position += direction * moveDistance;
         transform.position = Vector3.Lerp(transform.position, transform.position + direction * moveDistance, moveSpeed * Time.deltaTime);
