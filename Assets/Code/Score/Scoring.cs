@@ -7,13 +7,16 @@ public class Scoring : MonoBehaviour
     public Transform player;
 
     private int score = 0;
+    private float lastRecordedPosition = 0f; // Memorizza l'ultima posizione valida
     private float minDistance = 0f;
+    private float distanceThreshold = 1f; // Distanza minima percorsa per aggiornare il punteggio
 
     void Start()
     {
         if (player != null)
         {
             minDistance = player.position.x;
+            lastRecordedPosition = player.position.x; // Memorizza la posizione iniziale
         }
         UpdateScoreText();
     }
@@ -29,9 +32,11 @@ public class Scoring : MonoBehaviour
         {
             float currentDistance = player.position.x;
 
-            if (currentDistance < minDistance)
+            // Verifica se il personaggio ha percorso una distanza maggiore della soglia
+            if (Mathf.Abs(currentDistance - lastRecordedPosition) >= distanceThreshold)
             {
-                minDistance = currentDistance;
+                // Aggiorna solo quando è stata percorsa almeno una distanza di "distanceThreshold"
+                lastRecordedPosition = currentDistance;
                 score++;
                 UpdateScoreText();
             }
@@ -46,4 +51,3 @@ public class Scoring : MonoBehaviour
         }
     }
 }
-
