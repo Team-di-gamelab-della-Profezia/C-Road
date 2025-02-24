@@ -48,7 +48,6 @@ public class AutoFollowCamera : MonoBehaviour
             currentSpeed = baseSpeed;
         }
 
-
         transform.Translate(Vector3.left * Time.deltaTime * currentSpeed);
     }
 

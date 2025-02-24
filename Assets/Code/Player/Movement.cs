@@ -87,7 +87,7 @@ public class Movement : MonoBehaviour
                 maxDistanceReached = transform.position.z;
                 scoreScript.UpdateScore();
 
-                laneManager.CreateLane(gameObject.transform.position);
+                laneManager.CreateLane();
             }
         }
     }

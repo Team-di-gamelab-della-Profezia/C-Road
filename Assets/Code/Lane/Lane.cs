@@ -5,20 +5,17 @@ using TMPro;
 public class Lane : MonoBehaviour
 {
 
-    [Header("References")]
     public GameObject[] spawnPoints;
 
-    [Space(20)]
-    [Header("Variables")]
-    public LaneType myLaneType = LaneType.grass;
+    public GameObject[] laneTypes;
+
+    LaneType myLaneType = LaneType.grass;
     GameObject[] myObjectsToSpawn;
     bool spawnToLeft = true;
     float mySpawnInterval = 1.5f;
     float myLaneSpeed = 5f;
 
-    [Space(20)]
-    [Header("Materials")]
-    public MeshRenderer laneRenderer;
+    // public MeshRenderer laneRenderer;
     public Material[] laneMaterials;
 
 
@@ -30,7 +27,9 @@ public class Lane : MonoBehaviour
     {
         // set lane type and material
         myLaneType = newLaneType;
-        laneRenderer.material = laneMaterials[(int)myLaneType];
+        // laneRenderer.material = laneMaterials[(int)myLaneType];
+
+        Instantiate(laneTypes[(int)myLaneType], transform.position, transform.rotation);
 
         // Set objacles meshes to spawn
         myObjectsToSpawn = objectsToSpawn;

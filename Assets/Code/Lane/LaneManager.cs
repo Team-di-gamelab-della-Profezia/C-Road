@@ -7,7 +7,7 @@ public class LaneManager : MonoBehaviour
     public Vector2 laneSpeedRange = new Vector2 (2, 5);
     public Vector2 spawnIntervalRange = new Vector2 (3, 6);
 
-    float initialOffset = 4;
+    //float initialOffset = 4;
     int initialLanes = 10;
 
     [Header("Lane Dirt")]
@@ -23,18 +23,22 @@ public class LaneManager : MonoBehaviour
     public Vector2 minMaxLavaLanes = new Vector2(1, 3);
 
 
+    int curLaneIndex = 0;
+
 
     private void Start()
     {
         // Create some initial lanes
-        for (int i = 0; i < initialLanes; i++) {
-            CreateLane(new Vector3(i, 0, 0));
+        for (int i = 0; i < initialLanes -1; i++) {
+            CreateLane();
         }
     }
 
-    public void CreateLane(Vector3 playerPosition)
+    public void CreateLane()
     {
-        GameObject curLane = Instantiate(lanePrefab, new Vector3(playerPosition.x - laneDistance - initialOffset - initialLanes, 0, 0), transform.rotation);
+        curLaneIndex++;
+
+        GameObject curLane = Instantiate(lanePrefab, transform.position - new Vector3(curLaneIndex * laneDistance, 0, 0), transform.rotation);
 
         // Create new lane type
         LaneType newLaneType = (LaneType)Random.Range(0, 4);
