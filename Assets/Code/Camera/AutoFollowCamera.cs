@@ -48,17 +48,18 @@ public class AutoFollowCamera : MonoBehaviour
             currentSpeed = baseSpeed;
         }
 
+
         transform.Translate(Vector3.left * Time.deltaTime * currentSpeed);
     }
 
     void CheckIfOutOfView()
     {
-        // Verifica se il giocatore è fuori dallo schermo
-        Vector3 screenPosition = Vector3.zero; // .main.WorldToViewportPoint(player.position);
-
-        if (screenPosition.x < 0 || screenPosition.x > 1 || screenPosition.y < 0) // Fuori a sinistra, destra o in basso
+        
+        if (cam.WorldToViewportPoint(player.position).y < 0)
         {
-            Debug.Log("Game Over - Uscito dalla visuale!");
+            SceneManager.LoadScene(sceneToLoad); // Carica la scena selezionata
+        } else if (cam.WorldToViewportPoint(player.position).x < 0 || cam.WorldToViewportPoint(player.position).x > 1)
+        {
             SceneManager.LoadScene(sceneToLoad); // Carica la scena selezionata
         }
     }
