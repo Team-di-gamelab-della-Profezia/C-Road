@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class Scoring : MonoBehaviour
 {
-    public TMP_Text scoreText; // UI per il punteggio
+    public TMP_Text scoreText; 
 
     int score = 0;
 
@@ -17,4 +17,5 @@ public class Scoring : MonoBehaviour
             scoreText.text = "Score: " + score;
         }
     }
+
 }

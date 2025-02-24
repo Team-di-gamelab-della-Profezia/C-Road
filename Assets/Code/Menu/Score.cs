@@ -1,34 +1,43 @@
 using UnityEngine;
-using UnityEngine.UI;  
 using TMPro;            
 
 public class ScoreManager : MonoBehaviour
 {
-    public Text scoreText;   
     public TMP_Text tmpScoreText; 
 
     private void Start()
     {
-        
-        int highScore = PlayerPrefs.GetInt("Score", 0);
+        UpdateScoreDisplay();
+    }
 
-        // Mostra il punteggio
-        if (scoreText != null)
-            scoreText.text = "Score: " + highScore;
+    void UpdateScoreDisplay()
+    {
+        
+        int finalScore = PlayerPrefs.GetInt("Score", 0);  
+
+        
 
         if (tmpScoreText != null)
-            tmpScoreText.text = "Score: " + highScore;
+            tmpScoreText.text = "Score: " + finalScore;
     }
 
-    
+  
     public static void SaveScore(int newScore)
     {
-        int highScore = PlayerPrefs.GetInt("Score", 0);
+        int highScore = PlayerPrefs.GetInt("Score", 0);  
 
+        
         if (newScore > highScore)
         {
-            PlayerPrefs.SetInt("Score", newScore);
+            PlayerPrefs.SetInt("Score", newScore);  
             PlayerPrefs.Save(); 
+            Debug.Log("Nuovo punteggio massimo salvato: " + newScore);
         }
+
+        
+        PlayerPrefs.SetInt("Score", newScore);  
+        PlayerPrefs.Save();  
+        Debug.Log("Punteggio finale salvato: " + newScore);
     }
 }
+
