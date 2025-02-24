@@ -82,11 +82,13 @@ public class Lane : MonoBehaviour
         Quaternion tmpRot = spawnToLeft == true ? new Quaternion(0, 0, 0, 0) : new Quaternion (0, 90, 0, 0);
         spawnedObject = Instantiate(myObjectsToSpawn[0], spawnLocation, tmpRot);
 
-        // Imposta la direzione di movimento
-        spawnedObject.GetComponent<ObjectMovement>().SetMovementDirection(spawnToLeft, deathLocation);
-        // Imposta la velocità di movimento
-        spawnedObject.GetComponent<ObjectMovement>().SetMovementSpeed(myLaneSpeed);
-
+        if (spawnedObject != null)
+        {
+            // Imposta la direzione di movimento
+            spawnedObject.GetComponent<ObjectMovement>().SetMovementDirection(spawnToLeft, deathLocation);
+            // Imposta la velocità di movimento
+            spawnedObject.GetComponent<ObjectMovement>().SetMovementSpeed(myLaneSpeed);
+        }
 
         // richiama la coroutine
         StartCoroutine("SpawnWithInterval");

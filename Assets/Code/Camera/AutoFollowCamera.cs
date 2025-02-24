@@ -12,7 +12,7 @@ public class AutoFollowCamera : MonoBehaviour
     public string sceneToLoad = "GameOverScene"; // Nome della scena da caricare
 
     private float currentSpeed;
-    public GameObject cam;
+    public Camera cam;
     private bool hasStarted = false;
 
     void Start()
@@ -54,7 +54,7 @@ public class AutoFollowCamera : MonoBehaviour
     void CheckIfOutOfView()
     {
         // Verifica se il giocatore è fuori dallo schermo
-        Vector3 screenPosition = Camera.main.WorldToViewportPoint(player.position);
+        Vector3 screenPosition = Vector3.zero; // .main.WorldToViewportPoint(player.position);
 
         if (screenPosition.x < 0 || screenPosition.x > 1 || screenPosition.y < 0) // Fuori a sinistra, destra o in basso
         {
