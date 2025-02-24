@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -2621881151538273511}
   - component: {fileID: 4138814143726876610}
   - component: {fileID: 811761098095761467}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Obstacle_Cat1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31,7 +31,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -39.601933, y: -51.59664, z: -208.8403}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 5021276523702808357}
   m_Father: {fileID: 0}
@@ -91,7 +91,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 1.4072381, y: 3, z: 3.6226158}
-  m_Center: {x: 0.046380937, y: 2, z: -0.3113079}
+  m_Center: {x: 0.046380937, y: 1.5, z: -0.3113079}
 --- !u!1001 &3876752211886263904
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -100,9 +100,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1516577889435669742}
     m_Modifications:
+    - target: {fileID: 1245913081360055641, guid: f0f5a8aa209d03d4bb4528e618a7d49b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3337080843913080802, guid: f0f5a8aa209d03d4bb4528e618a7d49b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5775712250847843448, guid: f0f5a8aa209d03d4bb4528e618a7d49b, type: 3}
       propertyPath: m_Name
       value: Gatto
+      objectReference: {fileID: 0}
+    - target: {fileID: 5775712250847843448, guid: f0f5a8aa209d03d4bb4528e618a7d49b, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8098551834288890181, guid: f0f5a8aa209d03d4bb4528e618a7d49b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -144,7 +156,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3818797659598213761, guid: f0f5a8aa209d03d4bb4528e618a7d49b, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

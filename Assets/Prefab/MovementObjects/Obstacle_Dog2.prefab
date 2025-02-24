@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4289361774276242967}
   - component: {fileID: -2621881151538273511}
   - component: {fileID: 1972175700290624876}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Obstacle_Dog2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -156,6 +156,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -2007941574937232516, guid: 20499c5e74fa372459dd750e9be36607, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: -547624254585403901, guid: 20499c5e74fa372459dd750e9be36607, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -163,6 +167,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 20499c5e74fa372459dd750e9be36607, type: 3}
       propertyPath: m_Name
       value: cane
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 20499c5e74fa372459dd750e9be36607, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4289361774276242967}
   - component: {fileID: -2621881151538273511}
   - component: {fileID: -2324364059066787624}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Obstacle_Cat2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -159,6 +159,14 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 92b6d294a33a36843aa2e07f25de347b, type: 3}
       propertyPath: m_Name
       value: gatto
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 92b6d294a33a36843aa2e07f25de347b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3730255725759590378, guid: 92b6d294a33a36843aa2e07f25de347b, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8446842545820363942, guid: 92b6d294a33a36843aa2e07f25de347b, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
