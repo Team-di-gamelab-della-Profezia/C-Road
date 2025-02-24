@@ -3,7 +3,7 @@ using TMPro;
 
 public class CoinScore : MonoBehaviour
 {
-    public TMP_Text coinText; // Riferimento al testo TMP
+    public TMP_Text coinText; 
     private int score = 0;
 
     private void Start()
@@ -16,11 +16,11 @@ public class CoinScore : MonoBehaviour
     {
         if (other.CompareTag("Coin"))
         {
-            score += 5; // Aggiunge 5 punti quando raccoglie una moneta
+            score += 5; 
             Debug.Log("Score:" + score);
             UpdateScore();
             SaveScore();
-            Destroy(other.gameObject); // Rimuove la moneta
+            Destroy(other.gameObject); 
         }
     }
 
