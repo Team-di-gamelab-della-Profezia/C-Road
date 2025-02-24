@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 4664457721054261516}
   - component: {fileID: 5518006965328950134}
   - component: {fileID: 8605405419239524690}
+  - component: {fileID: 1888816488584414459}
   m_Layer: 0
   m_Name: remi
   m_TagString: Player
@@ -147,6 +148,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinText: {fileID: 0}
+--- !u!114 &1888816488584414459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7781435334874071650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9ab1a894b2b5ff46a49872ebad59986, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneToLoad: Main Menu
+  selectableLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  punteggioCorrente: 0
 --- !u!1001 &2003385270547506242
 PrefabInstance:
   m_ObjectHideFlags: 0

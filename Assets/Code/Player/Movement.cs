@@ -3,15 +3,17 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     public float moveDistance = 1f; // Distanza di movimento per ogni pressione del tasto
-    public float moveSpeed = 5f; // Velocit� di movimento per simulare un salto veloce
+    public float moveSpeed = 5f; // Velocità di movimento per simulare un salto veloce
+    public float jumpHeight = 2f; // Altezza del salto
     private float maxDistanceReached = 0f; // Distanza massima raggiunta in avanti
     private Vector3 startPosition;
 
     private Scoring scoreScript;
-    LaneManager laneManager;
+    public LaneManager laneManager;
 
-
-
+    private bool isJumping = false;
+    private float jumpTime = 0f;
+    private Vector3 targetPosition;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -29,34 +31,63 @@ public class Movement : MonoBehaviour
         #region Inputs
         if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.Space))
         {
-            Move(Vector3.left, true);
+            StartJump(Vector3.left);
         }
         else if (Input.GetKeyDown(KeyCode.DownArrow))
         {
-            Move(Vector3.right, false);
+            StartJump(Vector3.right);
         }
         else if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            Move(Vector3.back, false);
+            StartJump(Vector3.back);
         }
         else if (Input.GetKeyDown(KeyCode.RightArrow))
         {
-            Move(Vector3.forward, false);
+            StartJump(Vector3.forward);
         }
         #endregion
+
+        if (isJumping)
+        {
+            PerformJump();
+        }
     }
 
-    void Move(Vector3 direction, bool checkScore)
+    void StartJump(Vector3 direction)
     {
-        transform.position += direction * moveDistance;
-        transform.position = Vector3.Lerp(transform.position, transform.position + direction * moveDistance, moveSpeed * Time.deltaTime);
+        if (isJumping) return; // Non far partire un altro salto se il personaggio sta già saltando
+        isJumping = true;
+        targetPosition = transform.position + direction * moveDistance;
+        jumpTime = 0f; // Reset del tempo del salto
+    }
 
-        if (checkScore && transform.position.x < maxDistanceReached)
+    void PerformJump()
+    {
+        jumpTime += Time.deltaTime * moveSpeed;
+
+        // Calcolo della parabola del salto
+        float height = Mathf.Sin(jumpTime * Mathf.PI) * jumpHeight; // Calcola l'altezza del salto
+        Vector3 newPosition = Vector3.Lerp(transform.position, targetPosition, jumpTime);
+
+        // Aggiungi l'altezza alla posizione
+        newPosition.y = height;
+
+        transform.position = newPosition;
+
+        // Controlla se il salto è completo
+        if (jumpTime >= 1f)
         {
-            maxDistanceReached = transform.position.z;
-            scoreScript.UpdateScore();
+            isJumping = false;
+            transform.position = new Vector3(targetPosition.x, startPosition.y, targetPosition.z); // Reset dell'altezza a quella di partenza
 
-            laneManager.CreateLane(gameObject.transform.position);
+            // Aggiungi logica per aggiornare il punteggio e le corsie
+            if (newPosition.x < maxDistanceReached)
+            {
+                maxDistanceReached = transform.position.z;
+                scoreScript.UpdateScore();
+
+                laneManager.CreateLane(gameObject.transform.position);
+            }
         }
     }
 }
