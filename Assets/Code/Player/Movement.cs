@@ -51,6 +51,7 @@ public class Movement : MonoBehaviour
         {
             PerformJump();
         }
+
     }
 
     void StartJump(Vector3 direction)
