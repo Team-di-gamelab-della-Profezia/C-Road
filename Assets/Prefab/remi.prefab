@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 5518006965328950134}
   - component: {fileID: 8605405419239524690}
   - component: {fileID: 1888816488584414459}
+  - component: {fileID: 5429937843628917467}
   m_Layer: 0
   m_Name: remi
   m_TagString: Player
@@ -106,8 +107,8 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
+  m_Constraints: 112
+  m_CollisionDetection: 1
 --- !u!114 &4664457721054261516
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -120,8 +121,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8594781302b67546af956f28a8adc6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveDistance: 1
-  moveSpeed: 5
+  moveSpeed: 4
+  jumpHeight: 1
+  footstepSource: {fileID: 0}
+  footstepClip: {fileID: 0}
+  jumpSound: {fileID: 0}
 --- !u!114 &5518006965328950134
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -135,6 +139,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 0}
+  player: {fileID: 2731867453783006528}
 --- !u!114 &8605405419239524690
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -165,6 +170,21 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   punteggioCorrente: 0
+--- !u!114 &5429937843628917467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7781435334874071650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a85160dd884c4b740a64c41b8ea260cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  footstepSource: {fileID: 0}
+  footstepClip: {fileID: 8300000, guid: 47e0ee8d0a731d64f88a45eedd0ef9a1, type: 3}
+  stepInterval: 0.5
 --- !u!1001 &2003385270547506242
 PrefabInstance:
   m_ObjectHideFlags: 0
