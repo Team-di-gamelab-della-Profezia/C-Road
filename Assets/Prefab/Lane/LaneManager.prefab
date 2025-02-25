@@ -45,12 +45,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lanePrefab: {fileID: 3485404595483249624, guid: cfd1e84dcd7e0374e92ae21253c3873e, type: 3}
-  laneDistance: 1
+  laneDistance: 2
+  laneSpeedRange: {x: 1.5, y: 6}
+  spawnIntervalRange: {x: 3, y: 6}
   dirtObstacles:
-  - {fileID: 4942730595809365403, guid: 4f46d656dc7e5db4f82474d8bf3fb56f, type: 3}
-  - {fileID: 4942730595809365403, guid: a45d23ec0a964fe4c938661cd8574661, type: 3}
-  - {fileID: 4942730595809365403, guid: 020a46074445e60439ebb8a7cb0e19b3, type: 3}
-  - {fileID: 4942730595809365403, guid: 0ae1fa11c93fa0e48b7b3534967d81ee, type: 3}
+  - {fileID: 8280163861379604217, guid: 4f46d656dc7e5db4f82474d8bf3fb56f, type: 3}
+  - {fileID: 1653479849215318845, guid: 020a46074445e60439ebb8a7cb0e19b3, type: 3}
+  - {fileID: 4814418855924431382, guid: 1736e95c3b6223848a404f7c4ba3807c, type: 3}
   minMaxDirtLanes: {x: 1, y: 6}
   waterObstacles:
   - {fileID: 4942730595809365403, guid: 46f83d5f5cb70844e8a8f2d92cf011a4, type: 3}
