@@ -33,17 +33,18 @@ public class CoinPickup : MonoBehaviour
 
             if (audioSource != null && audioSource.clip != null)
             {
+                audioSource.enabled = true; // Forza l'attivazione dell'AudioSource
                 Debug.Log("Tentativo di riproduzione suono...");
                 audioSource.PlayOneShot(audioSource.clip);
                 Debug.Log("Suono riprodotto!");
             }
             else
             {
-                Debug.LogError("Errore: AudioSource o Audio Clip non assegnato!");
+                Debug.LogError("Errore: AudioSource disabilitato o Audio Clip non assegnato!");
             }
 
-            // Distrugge la moneta dopo aver riprodotto il suono
-            Destroy(gameObject);
+            // Distrugge la moneta dopo aver riprodotto il suono con un breve ritardo
+            Destroy(gameObject, 0.5f);
         }
     }
 }
