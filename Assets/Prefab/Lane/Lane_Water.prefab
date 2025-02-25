@@ -859,6 +859,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fiume
       objectReference: {fileID: 0}
+    - target: {fileID: 3275305081790601943, guid: 42cc4e4543bf84f4abae49f7598ae591, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3275305081790601943, guid: 42cc4e4543bf84f4abae49f7598ae591, type: 3}
+      propertyPath: m_TagString
+      value: Death Tag
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

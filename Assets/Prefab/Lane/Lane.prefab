@@ -162,7 +162,6 @@ MonoBehaviour:
   - {fileID: 924019862840274538, guid: 799df2d0d48a36249a75c30c355ed289, type: 3}
   - {fileID: 924019862840274538, guid: 15cc49f8b331c534bb3c867536385ce3, type: 3}
   - {fileID: 924019862840274538, guid: a314664e71db23f41b8fce48b24a6a31, type: 3}
-  laneRenderer: {fileID: 0}
   laneMaterials:
   - {fileID: 2100000, guid: 849a7a48052d8cb4ba4d48486958109d, type: 2}
   - {fileID: 2100000, guid: 77f1bc36457e0e640a8d91b2bb4a3224, type: 2}
