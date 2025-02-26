@@ -1649,6 +1649,10 @@ PrefabInstance:
       propertyPath: m_IsKinematic
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1888816488584414459, guid: bdec478e73824234f993c235358a74e6, type: 3}
+      propertyPath: sceneToLoad
+      value: Game Over Scene
+      objectReference: {fileID: 0}
     - target: {fileID: 2731867453783006528, guid: bdec478e73824234f993c235358a74e6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9.82
