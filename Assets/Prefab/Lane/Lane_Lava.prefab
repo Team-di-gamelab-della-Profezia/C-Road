@@ -626,6 +626,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Death Tag
       objectReference: {fileID: 0}
+    - target: {fileID: 8493676614458022636, guid: 6f4bccbf34b6b4b41bf7050d7a2244dd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 9120995743537053782, guid: 6f4bccbf34b6b4b41bf7050d7a2244dd, type: 3}
       propertyPath: m_Layer
       value: 6

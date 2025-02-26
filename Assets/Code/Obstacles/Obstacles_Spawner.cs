@@ -6,6 +6,6 @@ public class Obstacles_Objects : MonoBehaviour
     public GameObject[] _gameObject;
     private void OnEnable()
     {
-        Instantiate(_gameObject[0], transform.position, Quaternion.identity);
+        Instantiate(_gameObject[1], transform.position, Quaternion.identity);
     }
 }

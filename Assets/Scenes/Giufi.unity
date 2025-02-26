@@ -1711,16 +1711,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92298d108a4728b45bd776e003c7c85c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musicSource: {fileID: 1562898281}
-  background: {fileID: 8300000, guid: ce6c056fb90187947b7cd46d30ed91bb, type: 3}
-  topo: {fileID: 8300000, guid: 47e0ee8d0a731d64f88a45eedd0ef9a1, type: 3}
-  cane: {fileID: 8300000, guid: c4a9feb941c21b043b72a9310fa4c569, type: 3}
-  gatto: {fileID: 8300000, guid: a5f25b46ca6dd964f9f59572f51b479d, type: 3}
-  toro: {fileID: 8300000, guid: 1fbc49fd04762eb4992945fed3de3364, type: 3}
-  lava: {fileID: 8300000, guid: e854c07e20db1f8488bebcddf34d9ba7, type: 3}
-  acqua: {fileID: 8300000, guid: 4e2ff65a7c3c96b42b46b9c742737e26, type: 3}
-  morte: {fileID: 8300000, guid: e22809785ca7fe44198c9148cd87f49c, type: 3}
-  moneta: {fileID: 8300000, guid: dcc0632d4db64254796f8511e01abf66, type: 3}
 --- !u!4 &1692037813
 Transform:
   m_ObjectHideFlags: 0

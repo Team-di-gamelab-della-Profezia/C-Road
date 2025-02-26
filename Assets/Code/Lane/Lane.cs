@@ -58,6 +58,7 @@ public class Lane : MonoBehaviour
     // Spawn an obstacle
     public void SpawnObstacle()
     {
+        int randomIndex = Random.Range(0, myObjectsToSpawn.Length);
         if (myLaneType == LaneType.grass) { return; }
 
         Vector3 spawnLocation;
@@ -79,7 +80,7 @@ public class Lane : MonoBehaviour
         // Spawna un oggetto
         GameObject spawnedObject = null;
         Quaternion tmpRot = spawnToLeft == true ? new Quaternion(0, 0, 0, 0) : new Quaternion (0, 90, 0, 0);
-        spawnedObject = Instantiate(myObjectsToSpawn[0], spawnLocation, tmpRot);
+        spawnedObject = Instantiate(myObjectsToSpawn[randomIndex], spawnLocation, tmpRot);
 
         if (spawnedObject != null)
         {
