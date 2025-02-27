@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 8605405419239524690}
   - component: {fileID: 1888816488584414459}
   - component: {fileID: 5429937843628917467}
+  - component: {fileID: 2367101917111874040}
   m_Layer: 0
   m_Name: remi
   m_TagString: Player
@@ -105,10 +106,10 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
-  m_CollisionDetection: 1
+  m_CollisionDetection: 2
 --- !u!114 &4664457721054261516
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -122,7 +123,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveDistance: 2
-  moveSpeed: 6
+  moveSpeed: 7
   jumpHeight: 1
   laneManager: {fileID: 0}
 --- !u!114 &5518006965328950134
@@ -184,6 +185,18 @@ MonoBehaviour:
   footstepSource: {fileID: 0}
   footstepClip: {fileID: 8300000, guid: 47e0ee8d0a731d64f88a45eedd0ef9a1, type: 3}
   stepInterval: 0.5
+--- !u!114 &2367101917111874040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7781435334874071650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3774f7626bd31044383317ca0c817280, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2003385270547506242
 PrefabInstance:
   m_ObjectHideFlags: 0
