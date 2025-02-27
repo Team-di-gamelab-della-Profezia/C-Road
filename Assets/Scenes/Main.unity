@@ -546,6 +546,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c143cb2c94edf504c90e1f8c57ad5504, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  musicSource: {fileID: 0}
+  SFXSource: {fileID: 0}
+  Background: {fileID: 0}
+  Coin: {fileID: 0}
+  Lava: {fileID: 0}
+  Water: {fileID: 0}
+  Death: {fileID: 0}
+  Topo: {fileID: 0}
+  Cane: {fileID: 0}
+  Gatto: {fileID: 0}
+  Toro: {fileID: 0}
 --- !u!1 &485938253
 GameObject:
   m_ObjectHideFlags: 0
@@ -836,7 +847,7 @@ Transform:
   m_GameObject: {fileID: 773318607}
   serializedVersion: 2
   m_LocalRotation: {x: 0.29894495, y: -0.6408057, z: 0.29894495, w: 0.6408057}
-  m_LocalPosition: {x: 8.37, y: -8.72, z: -8.5}
+  m_LocalPosition: {x: 8.82, y: -6.93, z: -8.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1067,6 +1078,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8441248132303182648, guid: fe1a7f82583668048a254bec320e7b22, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8441248132303182648, guid: fe1a7f82583668048a254bec320e7b22, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8441248132303182648, guid: fe1a7f82583668048a254bec320e7b22, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8441248132303182648, guid: fe1a7f82583668048a254bec320e7b22, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8528995547403649186, guid: fe1a7f82583668048a254bec320e7b22, type: 3}
       propertyPath: m_Name
       value: PauseMenu
@@ -1208,7 +1235,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2731867453783006528, guid: bdec478e73824234f993c235358a74e6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 13.73
+      value: 12.55
       objectReference: {fileID: 0}
     - target: {fileID: 2731867453783006528, guid: bdec478e73824234f993c235358a74e6, type: 3}
       propertyPath: m_LocalPosition.y

@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 7001561856483105053}
   - component: {fileID: 6422900457053156571}
   - component: {fileID: -4213484880284532158}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Zolla Pietra
-  m_TagString: Saltabile
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -140,7 +140,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 19f90be1884370a4f8f0f43dd67a9762, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

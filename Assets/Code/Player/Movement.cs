@@ -9,7 +9,6 @@ public class Movement : MonoBehaviour
 
     private Scoring scoreScript;
     public LaneManager laneManager;
-    private Rigidbody rb;
 
     private bool isJumping = false;
     private float jumpTime = 0f;
@@ -21,10 +20,6 @@ public class Movement : MonoBehaviour
     {
         laneManager = FindAnyObjectByType<LaneManager>();
         scoreScript = GetComponent<Scoring>();
-        rb = GetComponent<Rigidbody>();
-
-        rb.collisionDetectionMode = CollisionDetectionMode.ContinuousDynamic;
-        rb.constraints = RigidbodyConstraints.FreezeRotation;
 
         startPosition = transform.position;
     }
@@ -103,10 +98,10 @@ public class Movement : MonoBehaviour
 
         // Calcolo della parabola del salto
         float height = Mathf.Sin(jumpTime * Mathf.PI) * jumpHeight;
-        Vector3 newPosition = Vector3.Lerp(rb.position, targetPosition, jumpTime);
+        Vector3 newPosition = Vector3.Lerp(transform.position, targetPosition, jumpTime);
         newPosition.y += height;
 
-        rb.MovePosition(newPosition);
+        transform.position = newPosition;
 
         if (jumpTime >= 1f)
         {
@@ -119,7 +114,7 @@ public class Movement : MonoBehaviour
                 targetPosition.y = hit.point.y;
             }
 
-            rb.MovePosition(new Vector3(targetPosition.x, targetPosition.y, targetPosition.z));
+            transform.position = new Vector3(targetPosition.x, targetPosition.y, targetPosition.z);
         }
     }
 
@@ -128,19 +123,19 @@ public class Movement : MonoBehaviour
         // Movimento orizzontale
         if (Input.GetKey(KeyCode.UpArrow))
         {
-            rb.MovePosition(transform.position + Vector3.left * moveSpeed * Time.deltaTime);
+            transform.position += Vector3.left * moveSpeed * Time.deltaTime;
         }
         if (Input.GetKey(KeyCode.DownArrow))
         {
-            rb.MovePosition(transform.position + Vector3.right * moveSpeed * Time.deltaTime);
+            transform.position += Vector3.right * moveSpeed * Time.deltaTime;
         }
         if (Input.GetKey(KeyCode.LeftArrow))
         {
-            rb.MovePosition(transform.position + Vector3.back * moveSpeed * Time.deltaTime);
+            transform.position += Vector3.back * moveSpeed * Time.deltaTime;
         }
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            rb.MovePosition(transform.position + Vector3.forward * moveSpeed * Time.deltaTime);
+            transform.position += Vector3.forward * moveSpeed * Time.deltaTime;
         }
     }
 
@@ -158,6 +153,31 @@ public class Movement : MonoBehaviour
         {
             isJumping = false;
             isBlocked = false;  // Rimuovi il blocco per il movimento
+        }
+    }
+
+    void OnCollisionStay(Collision collision)
+    {
+        // Gestisce la collisione con oggetti con tag "Ostacolo"
+        if (collision.collider.CompareTag("Ostacolo"))
+        {
+            isBlocked = true;  // Blocca il movimento finché il player è a contatto con l'ostacolo
+        }
+    }
+
+    // Se il player viene imparentato con una piattaforma
+    void OnTransformParentChanged()
+    {
+        if (transform.parent != null)
+        {
+            // Se il player è imparentato, i movimenti della piattaforma influenzeranno il player
+            // Rimuoviamo la fisica (Rigidbody) in modo che il movimento sia gestito tramite la posizione
+            this.GetComponent<Rigidbody>().isKinematic = true;
+        }
+        else
+        {
+            // Se il player non è imparentato, attiviamo la fisica per il movimento normale
+            this.GetComponent<Rigidbody>().isKinematic = false;
         }
     }
 }
