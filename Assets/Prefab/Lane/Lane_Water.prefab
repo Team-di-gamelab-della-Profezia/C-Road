@@ -1073,6 +1073,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2674564075596393485, guid: 42cc4e4543bf84f4abae49f7598ae591, type: 3}
+      propertyPath: m_Size.z
+      value: 5.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2674564075596393485, guid: 42cc4e4543bf84f4abae49f7598ae591, type: 3}
+      propertyPath: m_Center.y
+      value: -0.4
+      objectReference: {fileID: 0}
     - target: {fileID: 3275305081790601943, guid: 42cc4e4543bf84f4abae49f7598ae591, type: 3}
       propertyPath: m_Name
       value: Fiume
