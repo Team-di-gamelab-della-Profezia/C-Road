@@ -58,8 +58,8 @@ public class Lane : MonoBehaviour
     // Spawn an obstacle
     public void SpawnObstacle()
     {
-        int randomIndex = Random.Range(0, myObjectsToSpawn.Length);
         if (myLaneType == LaneType.grass) { return; }
+        int randomIndex = Random.Range(0, myObjectsToSpawn.Length);
 
         Vector3 spawnLocation;
         Vector3 deathLocation;
