@@ -16,7 +16,7 @@ public class CoinScore : MonoBehaviour
     {
         if (other.CompareTag("Coin"))
         {
-            Debug.Log("Moneta raccolta!");
+           
             score += 5;
             UpdateScore();
             SaveScore();

@@ -16,19 +16,19 @@ public class FootstepSound : MonoBehaviour
         if (footstepSource == null)
         {
             footstepSource = gameObject.AddComponent<AudioSource>(); // Crea un AudioSource se non è assegnato
-            Debug.Log("AudioSource creato!");
+          
         }
 
         if (footstepClip == null)
         {
-            Debug.LogError("Errore: Nessun suono assegnato a footstepClip!");
+           
         }
 
         footstepSource.clip = footstepClip;
         footstepSource.loop = false; // Evita loop continuo
         footstepSource.playOnAwake = false;
 
-        Debug.Log("Script avviato!");
+       
     }
 
     private void Update()
@@ -42,16 +42,16 @@ public class FootstepSound : MonoBehaviour
         // Debug per vedere se i tasti di movimento sono rilevati
         if (isMoving)
         {
-            Debug.Log("Movimento rilevato!");
+           
         }
         else
         {
-            Debug.Log("Nessun movimento rilevato.");
+           
         }
 
         // Controlla se il player sta toccando il terreno
         bool isGrounded = Physics.Raycast(transform.position, Vector3.down, 1.1f);
-        Debug.Log("IsGrounded: " + isGrounded);
+       
 
         if (isMoving && isGrounded)
         {
@@ -59,9 +59,9 @@ public class FootstepSound : MonoBehaviour
 
             if (stepTimer >= stepInterval)
             {
-                Debug.Log("Movimento rilevato! Suono in riproduzione...");
+                
                 footstepSource.PlayOneShot(footstepClip);  // Prova a riprodurre il suono
-                Debug.Log("Suono riprodotto!");
+             
                 stepTimer = 0f;
             }
         }
@@ -73,9 +73,9 @@ public class FootstepSound : MonoBehaviour
         // Se il player salta, riproduci il suono immediatamente
         if (isJumping && isGrounded)
         {
-            Debug.Log("Salto rilevato! Suono in riproduzione...");
+           
             footstepSource.PlayOneShot(footstepClip);  // Suono per il salto
-            Debug.Log("Suono riprodotto per salto!");
+            
         }
     }
 }
