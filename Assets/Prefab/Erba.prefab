@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 891857827984398256}
   - component: {fileID: 5925113955527333708}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Erba
-  m_TagString: Untagged
+  m_TagString: Saltabile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -114,9 +114,49 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -5608523083780033321, guid: ed0ed87134d8af849b482a64761f0575, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 73971172467302872, guid: ed0ed87134d8af849b482a64761f0575, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ed0ed87134d8af849b482a64761f0575, type: 3}
       propertyPath: m_Name
       value: 'tile erba '
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ed0ed87134d8af849b482a64761f0575, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1074594410723932711, guid: ed0ed87134d8af849b482a64761f0575, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1550735537674808988, guid: ed0ed87134d8af849b482a64761f0575, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4352281648930154431, guid: ed0ed87134d8af849b482a64761f0575, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5535590517062233758, guid: ed0ed87134d8af849b482a64761f0575, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6876225707811623713, guid: ed0ed87134d8af849b482a64761f0575, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7549910256739498069, guid: ed0ed87134d8af849b482a64761f0575, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7604644255720485349, guid: ed0ed87134d8af849b482a64761f0575, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

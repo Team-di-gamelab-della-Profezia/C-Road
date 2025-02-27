@@ -102,7 +102,11 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 9f0d10a7b4dd6f744a6e4b91da2bf331, type: 2}
     - target: {fileID: 919132149155446097, guid: 45b5e8ee20d968847bfd872b54ae3864, type: 3}
       propertyPath: m_Name
-      value: albero 1
+      value: Albero
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 45b5e8ee20d968847bfd872b54ae3864, type: 3}
+      propertyPath: m_TagString
+      value: Ostacolo
       objectReference: {fileID: 0}
     - target: {fileID: 6279248420896666733, guid: 45b5e8ee20d968847bfd872b54ae3864, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -122,6 +126,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 45b5e8ee20d968847bfd872b54ae3864, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8876795103958031813}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 45b5e8ee20d968847bfd872b54ae3864, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4220412964759456059}
   m_SourcePrefab: {fileID: 100100000, guid: 45b5e8ee20d968847bfd872b54ae3864, type: 3}
 --- !u!1 &4690017920354338035 stripped
 GameObject:
@@ -194,3 +201,30 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &4220412964759456059
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4690017920354338035}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
