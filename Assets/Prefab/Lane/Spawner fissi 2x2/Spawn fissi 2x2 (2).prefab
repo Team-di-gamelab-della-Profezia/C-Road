@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &649553018605447763
+--- !u!1 &9046751817090735345
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,49 +8,49 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6499843313823156312}
-  - component: {fileID: 8962017908212553252}
-  - component: {fileID: 8886780161838156291}
-  - component: {fileID: 1178960332379940340}
-  - component: {fileID: 6718717066430426661}
+  - component: {fileID: 5160164091793963151}
+  - component: {fileID: 4489656267384849804}
+  - component: {fileID: 6585239757621652094}
+  - component: {fileID: 5836983781222359341}
+  - component: {fileID: 8824878851465217170}
   m_Layer: 0
-  m_Name: Spawner fissi
+  m_Name: Spawn fissi 2x2 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6499843313823156312
+--- !u!4 &5160164091793963151
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 649553018605447763}
+  m_GameObject: {fileID: 9046751817090735345}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 6.28}
-  m_LocalScale: {x: 0.30000004, y: 0.3, z: 0.3}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.8250694, y: 0.12645297, z: 8.4972}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &8962017908212553252
+--- !u!33 &4489656267384849804
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 649553018605447763}
+  m_GameObject: {fileID: 9046751817090735345}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &8886780161838156291
+--- !u!23 &6585239757621652094
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 649553018605447763}
-  m_Enabled: 1
+  m_GameObject: {fileID: 9046751817090735345}
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -88,13 +88,13 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &1178960332379940340
+--- !u!65 &5836983781222359341
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 649553018605447763}
+  m_GameObject: {fileID: 9046751817090735345}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -103,24 +103,29 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6718717066430426661
+--- !u!114 &8824878851465217170
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 649553018605447763}
+  m_GameObject: {fileID: 9046751817090735345}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5888a9406567b974eb7905001c3a15f9, type: 3}
+  m_Script: {fileID: 11500000, guid: 992225663dda8054c9c25fa2996be6aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   objectsToSpawn:
-  - {fileID: 8093940769377871639, guid: c93f5bcfec04886409bc0e2e1fcabba1, type: 3}
+  - {fileID: 5964306433129014235, guid: 0c06493e296144d478e8a6b141842f8f, type: 3}
+  - {fileID: 7085526752386224275, guid: 836484ce4772ff94ea8aa864c55c4fad, type: 3}
+  - {fileID: 94492904311808924, guid: 5a640e4c9a02e4e4ead87e79a6557f70, type: 3}
+  - {fileID: 650363538776446606, guid: 09df647f4b09f3746b15f2c6fbd8783e, type: 3}
+  - {fileID: 3956636203196987492, guid: 73b5dd5379e38594e813480fc4665582, type: 3}
   spawnPoint: {fileID: 0}
+  spawnProbability: 0.4
