@@ -4,23 +4,29 @@ public class LaneManager : MonoBehaviour
 {
     public GameObject lanePrefab;
     public float laneDistance = 1f;
-    public Vector2 laneSpeedRange = new Vector2 (2, 5);
-    public Vector2 spawnIntervalRange = new Vector2 (3, 6);
+    Vector2 laneSpeedRange = new Vector2 (2, 5);
+    Vector2 spawnIntervalRange = new Vector2 (3, 6);
 
     //float initialOffset = 4;
     int initialLanes = 10;
 
     [Header("Lane Dirt")]
     public GameObject[] dirtObstacles;
-    public Vector2 minMaxDirtLanes = new Vector2 (1,6);
+    // public Vector2 minMaxDirtLanes = new Vector2 (1,6);
+    public Vector2 dirtLaneSpeedRange = new Vector2(2, 5);
+    public Vector2 dirtSpawnIntervalRange = new Vector2(3, 6);
 
     [Header("Lane Water")]
     public GameObject[] waterObstacles;
-    public Vector2 minMaxWaterLanes = new Vector2(1, 3);
+    // public Vector2 minMaxWaterLanes = new Vector2(1, 3);
+    public Vector2 waterLaneSpeedRange = new Vector2(2, 5);
+    public Vector2 waterSpawnIntervalRange = new Vector2(3, 6);
 
     [Header("Lane Lava")]
     public GameObject[] lavaObstacles;
-    public Vector2 minMaxLavaLanes = new Vector2(1, 3);
+    // public Vector2 minMaxLavaLanes = new Vector2(1, 3);
+    public Vector2 lavaLaneSpeedRange = new Vector2(2, 5);
+    public Vector2 lavaSpawnIntervalRange = new Vector2(3, 6);
 
 
     int curLaneIndex = 0;
@@ -47,13 +53,23 @@ public class LaneManager : MonoBehaviour
         // Do stuff relative to lane type
         switch (newLaneType)
         {
-            case LaneType.grass: obstaclesToSpawn = null; // grass
+            case LaneType.grass: // grass
+                obstaclesToSpawn = null;
                 break;
-            case LaneType.dirt: obstaclesToSpawn = dirtObstacles; // dirt
+            case LaneType.dirt: // dirt
+                obstaclesToSpawn = dirtObstacles; 
+                laneSpeedRange = dirtLaneSpeedRange;
+                spawnIntervalRange = dirtSpawnIntervalRange;
                 break;
-            case LaneType.water: obstaclesToSpawn = waterObstacles; // water
+            case LaneType.water: // water
+                obstaclesToSpawn = waterObstacles;
+                laneSpeedRange = waterLaneSpeedRange;
+                spawnIntervalRange = waterSpawnIntervalRange;
                 break;
-            case LaneType.lava: obstaclesToSpawn = lavaObstacles; // lava
+            case LaneType.lava: // lava
+                obstaclesToSpawn = lavaObstacles;
+                laneSpeedRange = lavaLaneSpeedRange;
+                spawnIntervalRange = lavaSpawnIntervalRange;
                 break;
             default: obstaclesToSpawn = null; print("Incorrect lane");
                 break;
