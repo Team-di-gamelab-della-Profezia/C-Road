@@ -12,18 +12,20 @@ public class Lane : MonoBehaviour
     LaneType myLaneType = LaneType.grass;
     GameObject[] myObjectsToSpawn;
     bool spawnToLeft = true;
-    float mySpawnInterval = 1.5f;
-    float myLaneSpeed = 5f;
+    Vector2 mySpawnInterval;
+    Vector2 myLaneSpeed;
 
     // public MeshRenderer laneRenderer;
     public Material[] laneMaterials;
 
 
 
+    bool isFirstSpawn = true;
+
 
 
     // Init all parameters of a lane
-    public void InitLane(LaneType newLaneType, GameObject[] objectsToSpawn, bool moveToLeft, float laneSpeed, float laneInterval)
+    public void InitLane(LaneType newLaneType, GameObject[] objectsToSpawn, bool moveToLeft, Vector2 laneSpeed, Vector2 laneInterval)
     {
         // set lane type and material
         myLaneType = newLaneType;
@@ -50,15 +52,34 @@ public class Lane : MonoBehaviour
     // Wait some time and the spawn an obstacle
     public IEnumerator SpawnWithInterval()
     {
+        float waitTime = 0f;
+
+
+        if (isFirstSpawn)
+        {
+            if (myLaneType == LaneType.water || myLaneType == LaneType.lava)
+            {
+                waitTime = 0;
+            }
+        } else {
+            waitTime = Random.Range(mySpawnInterval.x, mySpawnInterval.y);
+        }
+
+        isFirstSpawn = false;
+
+        // print("SPAWN OBJ");
         // Aspetta per spawn interval
-        yield return new WaitForSeconds(mySpawnInterval);
+        yield return new WaitForSeconds(waitTime);
         SpawnObstacle();
     }
 
     // Spawn an obstacle
     public void SpawnObstacle()
     {
-        if (myLaneType == LaneType.grass) { return; }
+        if (myLaneType == LaneType.grass)
+        {
+            return;
+        }
         int randomIndex = Random.Range(0, myObjectsToSpawn.Length);
 
         Vector3 spawnLocation;
@@ -87,7 +108,7 @@ public class Lane : MonoBehaviour
             // Imposta la direzione di movimento
             spawnedObject.GetComponent<ObjectMovement>().SetMovementDirection(spawnToLeft, deathLocation);
             // Imposta la velocità di movimento
-            spawnedObject.GetComponent<ObjectMovement>().SetMovementSpeed(myLaneSpeed);
+            spawnedObject.GetComponent<ObjectMovement>().SetMovementSpeed(Random.Range(myLaneSpeed.x, myLaneSpeed.y));
         }
 
         // richiama la coroutine

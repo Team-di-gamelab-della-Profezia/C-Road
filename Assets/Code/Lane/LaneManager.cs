@@ -80,13 +80,13 @@ public class LaneManager : MonoBehaviour
         bool tmpDir = tmpInt < 0.5f ? false : true;
 
         // Set random speed
-        float tmpSpeed = Random.Range(laneSpeedRange.x, laneSpeedRange.y);
+        // float tmpSpeed = Random.Range(laneSpeedRange.x, laneSpeedRange.y);
 
         // Set random interval
-        float tmpInterval = Random.Range(spawnIntervalRange.x, spawnIntervalRange.y);
+        // float tmpInterval = Random.Range(spawnIntervalRange.x, spawnIntervalRange.y);
 
         // Init lane
-        curLane.GetComponent<Lane>().InitLane(newLaneType, obstaclesToSpawn, tmpDir, tmpSpeed, tmpInterval);
+        curLane.GetComponent<Lane>().InitLane(newLaneType, obstaclesToSpawn, tmpDir, spawnIntervalRange, spawnIntervalRange);
 
     }
 }
