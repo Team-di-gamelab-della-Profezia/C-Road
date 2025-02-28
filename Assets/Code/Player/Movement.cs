@@ -52,27 +52,18 @@ public class Movement : MonoBehaviour
     {
         if (isJumping) return;
 
-        // Verifica la presenza di ostacoli o oggetti saltabili
+        // Verifica se ci sono ostacoli nella zona di atterraggio
         RaycastHit hit;
-        if (Physics.Raycast(transform.position, direction, out hit, moveDistance))
+        if (Physics.Raycast(transform.position + direction, Vector3.down, out hit, jumpHeight))
         {
             if (hit.collider.CompareTag("Ostacolo"))
             {
-                // Se l'oggetto è un ostacolo, blocca il movimento
-                isBlocked = true;
-                return;
-            }
-            else if (hit.collider.CompareTag("Saltabile"))
-            {
-                // Se l'oggetto è saltabile, consenti il salto sopra di esso
-                isJumping = true;
-                targetPosition = transform.position + direction * moveDistance;
-                jumpTime = 0f;
+                // Se c'è un ostacolo nella zona di atterraggio, non avviare il salto
                 return;
             }
         }
 
-        // Movimento normale
+        // Se non ci sono ostacoli, avvia il salto
         isJumping = true;
         isBlocked = false;  // Reset blocco
         targetPosition = transform.position + direction * moveDistance;
