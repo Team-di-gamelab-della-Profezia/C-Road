@@ -17,11 +17,10 @@ public class GameOverManager : MonoBehaviour
 
     private void Update()
     {
-        // Controlla se la posizione del giocatore lungo l'asse Z è fuori dai limiti
         if (!gameOver && (player.position.z >= 9f || player.position.z <= -9f))
         {
             Debug.Log("Player fuori dai limiti. Game Over.");
-            EndGame();  // Fine del gioco e cambio scena
+            EndGame();
         }
     }
 
@@ -50,32 +49,49 @@ public class GameOverManager : MonoBehaviour
 
     void EndGame()
     {
-        if (gameOver) return;  // Evita che venga eseguito più volte
-        gameOver = true;  // Imposta il flag per evitare chiamate multiple
+        if (gameOver) return;
+        gameOver = true;
 
-        // Riproduci il suono di morte prima di caricare la scena
         if (audioSource != null && deathSound != null)
         {
-            Debug.Log("Suono di morte riprodotto.");
-            audioSource.PlayOneShot(deathSound);  // Riproduce il suono
+            Debug.Log("Riproduzione audio...");
+            audioSource.PlayOneShot(deathSound);
         }
 
-        // Avvia la Coroutine per aspettare il suono e poi caricare la scena
-        StartCoroutine(WaitForSoundAndLoadScene(deathSound.length));
+        Debug.Log("Forzando il caricamento della scena tra 1 secondo...");
+        Invoke(nameof(ForceLoadGameOverScene), 1f);
     }
 
-    // Coroutine per aspettare il suono e caricare la scena
-    IEnumerator WaitForSoundAndLoadScene(float soundDuration)
+    void ForceLoadGameOverScene()
     {
-        yield return new WaitForSeconds(soundDuration);  // Attende la durata del suono
-        LoadGameOverScene();
+        Debug.Log("Tentativo di caricamento della scena: " + sceneToLoad);
+
+        // Assicurati che il timeScale sia a 1 (se il gioco è in pausa)
+        Time.timeScale = 1f;
+
+        // Controlla se la scena esiste nei Build Settings
+        if (SceneExists(sceneToLoad))
+        {
+            Debug.Log("Scena trovata! Caricamento in corso...");
+            SceneManager.LoadScene(sceneToLoad, LoadSceneMode.Single);
+        }
+        else
+        {
+            Debug.LogError("ERRORE: La scena '" + sceneToLoad + "' non è nei Build Settings! Aggiungila e riprova.");
+        }
     }
 
-    void LoadGameOverScene()
+    bool SceneExists(string sceneName)
     {
-        // Debug per verificare che la scena venga caricata
-        Debug.Log("Caricamento scena di Game Over...");
-        ScoreManager.SaveScore(punteggioCorrente);
-        SceneManager.LoadScene(sceneToLoad);  // Carica la scena di game over
+        for (int i = 0; i < SceneManager.sceneCountInBuildSettings; i++)
+        {
+            string scenePath = SceneUtility.GetScenePathByBuildIndex(i);
+            string sceneFileName = System.IO.Path.GetFileNameWithoutExtension(scenePath);
+            if (sceneFileName == sceneName)
+            {
+                return true;
+            }
+        }
+        return false;
     }
 }

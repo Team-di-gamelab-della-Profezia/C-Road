@@ -2383,6 +2383,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 5353720318504765339, guid: b02743b54611da5479ab24619fdbcfdc, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 826627223}
+    - target: {fileID: 5353720318504765339, guid: b02743b54611da5479ab24619fdbcfdc, type: 3}
       propertyPath: dirtLaneSpeedRange.x
       value: 2
       objectReference: {fileID: 0}

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 9157505674916984283}
   - component: {fileID: 1184780294088745166}
   - component: {fileID: 2754182298545113348}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: gatto
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4552766955819983921}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: gatto
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 4208198557079895785}
   - component: {fileID: 2691668931315093516}
   - component: {fileID: 5271263731962219540}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Obstacle_Cat1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
