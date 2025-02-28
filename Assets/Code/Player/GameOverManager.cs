@@ -48,17 +48,21 @@ public class GameOverManager : MonoBehaviour
         return ((1 << obj.layer) & selectableLayer) != 0;
     }
 
-    void EndGame()
+    public void EndGame()
     {
+        // Time.timeScale = 0;
+
         if (gameOver) return;  // Evita che venga eseguito più volte
         gameOver = true;  // Imposta il flag per evitare chiamate multiple
 
         // Riproduci il suono di morte prima di caricare la scena
         if (audioSource != null && deathSound != null)
         {
-            Debug.Log("Suono di morte riprodotto.");
+            //Debug.Log("Suono di morte riprodotto.");
             audioSource.PlayOneShot(deathSound);  // Riproduce il suono
         }
+
+
 
         // Avvia la Coroutine per aspettare il suono e poi caricare la scena
         StartCoroutine(WaitForSoundAndLoadScene(deathSound.length));
@@ -67,7 +71,7 @@ public class GameOverManager : MonoBehaviour
     // Coroutine per aspettare il suono e caricare la scena
     IEnumerator WaitForSoundAndLoadScene(float soundDuration)
     {
-        yield return new WaitForSeconds(soundDuration);  // Attende la durata del suono
+        yield return new WaitForSeconds(0.5f);  // Attende la durata del suono
         LoadGameOverScene();
     }
 

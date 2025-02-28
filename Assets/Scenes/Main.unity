@@ -2367,7 +2367,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 826627223}
-  baseSpeed: 2
+  baseSpeed: 1.9
   speedIncrease: 6
   PtFugaNord: 10
   PtFugaSud: 0.1
