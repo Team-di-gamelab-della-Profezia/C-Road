@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8444422131195640693}
   - component: {fileID: -7540166270893248587}
+  - component: {fileID: 5675388403342640585}
   m_Layer: 0
   m_Name: Stand 5
   m_TagString: Ostacolo
@@ -60,6 +61,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 2
+--- !u!65 &5675388403342640585
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3956636203196987492}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.9148309, y: 6.4212475, z: 1.9163043}
+  m_Center: {x: 0.062910914, y: 2.7106233, z: 0.04960859}
 --- !u!1001 &2113588039070987372
 PrefabInstance:
   m_ObjectHideFlags: 0

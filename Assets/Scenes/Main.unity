@@ -546,17 +546,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c143cb2c94edf504c90e1f8c57ad5504, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musicSource: {fileID: 0}
-  SFXSource: {fileID: 0}
-  Background: {fileID: 0}
-  Coin: {fileID: 0}
-  Lava: {fileID: 0}
-  Water: {fileID: 0}
-  Death: {fileID: 0}
-  Topo: {fileID: 0}
-  Cane: {fileID: 0}
-  Gatto: {fileID: 0}
-  Toro: {fileID: 0}
+  musicSource: {fileID: 212974210}
+  SFXSource: {fileID: 1888644125}
+  Background: {fileID: 8300000, guid: ce6c056fb90187947b7cd46d30ed91bb, type: 3}
+  Coin: {fileID: 8300000, guid: dcc0632d4db64254796f8511e01abf66, type: 3}
+  Lava: {fileID: 8300000, guid: e854c07e20db1f8488bebcddf34d9ba7, type: 3}
+  Water: {fileID: 8300000, guid: 4e2ff65a7c3c96b42b46b9c742737e26, type: 3}
+  Death: {fileID: 8300000, guid: e22809785ca7fe44198c9148cd87f49c, type: 3}
+  Topo: {fileID: 8300000, guid: 47e0ee8d0a731d64f88a45eedd0ef9a1, type: 3}
+  Cane: {fileID: 8300000, guid: c4a9feb941c21b043b72a9310fa4c569, type: 3}
+  Gatto: {fileID: 8300000, guid: a5f25b46ca6dd964f9f59572f51b479d, type: 3}
+  Toro: {fileID: 8300000, guid: 1fbc49fd04762eb4992945fed3de3364, type: 3}
 --- !u!1 &485938253
 GameObject:
   m_ObjectHideFlags: 0
@@ -1235,7 +1235,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2731867453783006528, guid: bdec478e73824234f993c235358a74e6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12.55
+      value: 12.23
       objectReference: {fileID: 0}
     - target: {fileID: 2731867453783006528, guid: bdec478e73824234f993c235358a74e6, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1725,7 +1725,7 @@ MonoBehaviour:
   distance: 0.1
   sceneToLoad: Game Over Scene
   cam: {fileID: 773318609}
---- !u!1001 &3126252217477974345
+--- !u!1001 &3519039567239667539
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -1733,55 +1733,55 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1232671012108208313, guid: 42cc4e4543bf84f4abae49f7598ae591, type: 3}
+    - target: {fileID: 4668057521642904661, guid: 6f4bccbf34b6b4b41bf7050d7a2244dd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.788125
+      value: 0.8019018
       objectReference: {fileID: 0}
-    - target: {fileID: 1232671012108208313, guid: 42cc4e4543bf84f4abae49f7598ae591, type: 3}
+    - target: {fileID: 4668057521642904661, guid: 6f4bccbf34b6b4b41bf7050d7a2244dd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.12999988
+      value: -0.12999916
       objectReference: {fileID: 0}
-    - target: {fileID: 1232671012108208313, guid: 42cc4e4543bf84f4abae49f7598ae591, type: 3}
+    - target: {fileID: 4668057521642904661, guid: 6f4bccbf34b6b4b41bf7050d7a2244dd, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -20.37
+      value: -21.22
       objectReference: {fileID: 0}
-    - target: {fileID: 1232671012108208313, guid: 42cc4e4543bf84f4abae49f7598ae591, type: 3}
+    - target: {fileID: 4668057521642904661, guid: 6f4bccbf34b6b4b41bf7050d7a2244dd, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1232671012108208313, guid: 42cc4e4543bf84f4abae49f7598ae591, type: 3}
+    - target: {fileID: 4668057521642904661, guid: 6f4bccbf34b6b4b41bf7050d7a2244dd, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1232671012108208313, guid: 42cc4e4543bf84f4abae49f7598ae591, type: 3}
+    - target: {fileID: 4668057521642904661, guid: 6f4bccbf34b6b4b41bf7050d7a2244dd, type: 3}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1232671012108208313, guid: 42cc4e4543bf84f4abae49f7598ae591, type: 3}
+    - target: {fileID: 4668057521642904661, guid: 6f4bccbf34b6b4b41bf7050d7a2244dd, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1232671012108208313, guid: 42cc4e4543bf84f4abae49f7598ae591, type: 3}
+    - target: {fileID: 4668057521642904661, guid: 6f4bccbf34b6b4b41bf7050d7a2244dd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1232671012108208313, guid: 42cc4e4543bf84f4abae49f7598ae591, type: 3}
+    - target: {fileID: 4668057521642904661, guid: 6f4bccbf34b6b4b41bf7050d7a2244dd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1232671012108208313, guid: 42cc4e4543bf84f4abae49f7598ae591, type: 3}
+    - target: {fileID: 4668057521642904661, guid: 6f4bccbf34b6b4b41bf7050d7a2244dd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3275305081790601943, guid: 42cc4e4543bf84f4abae49f7598ae591, type: 3}
+    - target: {fileID: 4736615255262457435, guid: 6f4bccbf34b6b4b41bf7050d7a2244dd, type: 3}
       propertyPath: m_Name
-      value: Fiume
+      value: Fiume di lava
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 42cc4e4543bf84f4abae49f7598ae591, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 6f4bccbf34b6b4b41bf7050d7a2244dd, type: 3}
 --- !u!1001 &4856248508910349665
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1881,4 +1881,4 @@ SceneRoots:
   - {fileID: 4856248508910349665}
   - {fileID: 1563867099}
   - {fileID: 466190956}
-  - {fileID: 3126252217477974345}
+  - {fileID: 3519039567239667539}
