@@ -125,7 +125,6 @@ MonoBehaviour:
   moveDistance: 2
   moveSpeed: 7
   jumpHeight: 1
-  laneManager: {fileID: 0}
 --- !u!114 &5518006965328950134
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -170,6 +169,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   punteggioCorrente: 0
+  player: {fileID: 2731867453783006528}
+  audioSource: {fileID: 0}
+  deathSound: {fileID: 8300000, guid: e22809785ca7fe44198c9148cd87f49c, type: 3}
 --- !u!114 &5429937843628917467
 MonoBehaviour:
   m_ObjectHideFlags: 0

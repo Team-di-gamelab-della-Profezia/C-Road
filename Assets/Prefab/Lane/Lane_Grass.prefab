@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2244804920208554416}
   m_Layer: 0
   m_Name: Lane_Grass
-  m_TagString: Untagged
+  m_TagString: Saltabile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1449,7 +1449,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 891857827984398256, guid: 3ead945aa4371ee4a8ae19fd17238994, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.7
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 891857827984398256, guid: 3ead945aa4371ee4a8ae19fd17238994, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1461,7 +1461,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 891857827984398256, guid: 3ead945aa4371ee4a8ae19fd17238994, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 7.8
       objectReference: {fileID: 0}
     - target: {fileID: 891857827984398256, guid: 3ead945aa4371ee4a8ae19fd17238994, type: 3}
       propertyPath: m_LocalRotation.w

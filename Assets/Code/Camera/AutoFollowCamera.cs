@@ -35,7 +35,7 @@ public class AutoFollowCamera : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (!hasStarted) return;
+        if (!hasStarted || player == null) return; // Controllo che il player esista
 
         distance = Mathf.Abs(player.position.x) - Mathf.Abs(cam.transform.position.x);
 
@@ -53,15 +53,14 @@ public class AutoFollowCamera : MonoBehaviour
 
     void CheckIfOutOfView()
     {
-        
-        if (cam.WorldToViewportPoint(player.position).y < 0)
-        {
-            SceneManager.LoadScene(sceneToLoad); // Carica la scena selezionata
-        } else if (cam.WorldToViewportPoint(player.position).x < 0 || cam.WorldToViewportPoint(player.position).x > 1)
+        if (player == null) return; // Evita il controllo se il player non esiste più
+
+        Vector3 playerViewportPos = cam.WorldToViewportPoint(player.position);
+
+        if (playerViewportPos.y < 0 || playerViewportPos.x < 0 || playerViewportPos.x > 1)
         {
             SceneManager.LoadScene(sceneToLoad); // Carica la scena selezionata
         }
     }
 }
-
 
