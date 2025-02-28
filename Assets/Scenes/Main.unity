@@ -275,8 +275,9 @@ GameObject:
   - component: {fileID: 153583719}
   - component: {fileID: 153583718}
   - component: {fileID: 153583717}
+  - component: {fileID: 153583720}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Pausa
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -407,6 +408,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 153583715}
   m_CullTransparentMesh: 1
+--- !u!114 &153583720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 153583715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6484c0d73b2b5f49a9a846c906f56ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pause_menu: {fileID: 153583715}
 --- !u!1 &190098869
 GameObject:
   m_ObjectHideFlags: 0
@@ -668,17 +682,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 466190956}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &283503728 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5353720318504765339, guid: b02743b54611da5479ab24619fdbcfdc, type: 3}
-  m_PrefabInstance: {fileID: 4856248508910349665}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a343e8dc80e020d4c9753b241f20c49e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -785,6 +788,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 466190956}
+  - component: {fileID: 466190960}
   - component: {fileID: 466190959}
   m_Layer: 0
   m_Name: AudioManager
@@ -833,6 +837,19 @@ MonoBehaviour:
   Cane: {fileID: 8300000, guid: c4a9feb941c21b043b72a9310fa4c569, type: 3}
   Gatto: {fileID: 8300000, guid: a5f25b46ca6dd964f9f59572f51b479d, type: 3}
   Toro: {fileID: 8300000, guid: 1fbc49fd04762eb4992945fed3de3364, type: 3}
+--- !u!114 &466190960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 466190954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98725657a3a293944bb1f5e05389c946, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfxAudioSource: {fileID: 1888644125}
 --- !u!1 &485938253
 GameObject:
   m_ObjectHideFlags: 0
@@ -1862,14 +1879,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1888816488584414459, guid: bdec478e73824234f993c235358a74e6, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 826627223}
-    - target: {fileID: 1888816488584414459, guid: bdec478e73824234f993c235358a74e6, type: 3}
-      propertyPath: deathSound
-      value: 
-      objectReference: {fileID: 8300000, guid: e22809785ca7fe44198c9148cd87f49c, type: 3}
-    - target: {fileID: 1888816488584414459, guid: bdec478e73824234f993c235358a74e6, type: 3}
       propertyPath: audioSource
       value: 
       objectReference: {fileID: 1888644125}
@@ -1914,9 +1923,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4664457721054261516, guid: bdec478e73824234f993c235358a74e6, type: 3}
-      propertyPath: laneManager
+      propertyPath: audioSource
       value: 
-      objectReference: {fileID: 283503728}
+      objectReference: {fileID: 1888644125}
     - target: {fileID: 5429937843628917467, guid: bdec478e73824234f993c235358a74e6, type: 3}
       propertyPath: footstepSource
       value: 
@@ -1965,8 +1974,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: dcc0632d4db64254796f8511e01abf66, type: 3}
+  m_Resource: {fileID: 8300000, guid: dcc0632d4db64254796f8511e01abf66, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -2375,15 +2384,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5353720318504765339, guid: b02743b54611da5479ab24619fdbcfdc, type: 3}
       propertyPath: dirtLaneSpeedRange.x
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5353720318504765339, guid: b02743b54611da5479ab24619fdbcfdc, type: 3}
       propertyPath: lavaLaneSpeedRange.x
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5353720318504765339, guid: b02743b54611da5479ab24619fdbcfdc, type: 3}
       propertyPath: waterLaneSpeedRange.x
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5353720318504765339, guid: b02743b54611da5479ab24619fdbcfdc, type: 3}
       propertyPath: waterLaneSpeedRange.y
@@ -2391,15 +2400,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5353720318504765339, guid: b02743b54611da5479ab24619fdbcfdc, type: 3}
       propertyPath: dirtSpawnIntervalRange.x
-      value: 2
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5353720318504765339, guid: b02743b54611da5479ab24619fdbcfdc, type: 3}
+      propertyPath: dirtSpawnIntervalRange.y
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5353720318504765339, guid: b02743b54611da5479ab24619fdbcfdc, type: 3}
       propertyPath: lavaSpawnIntervalRange.x
-      value: 2
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5353720318504765339, guid: b02743b54611da5479ab24619fdbcfdc, type: 3}
+      propertyPath: lavaSpawnIntervalRange.y
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5353720318504765339, guid: b02743b54611da5479ab24619fdbcfdc, type: 3}
       propertyPath: waterSpawnIntervalRange.x
-      value: 2
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5353720318504765339, guid: b02743b54611da5479ab24619fdbcfdc, type: 3}
+      propertyPath: waterSpawnIntervalRange.y
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7101272783901099244, guid: b02743b54611da5479ab24619fdbcfdc, type: 3}
       propertyPath: m_LocalPosition.x

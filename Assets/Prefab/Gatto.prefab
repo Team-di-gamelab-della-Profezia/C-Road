@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8112351503810786569}
   - component: {fileID: 9214133388469544256}
   - component: {fileID: 6320782302942690837}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: gatto
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,7 +96,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2667364581160219992}
   - component: {fileID: 3818797659598213761}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: gatto
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -152,7 +152,7 @@ GameObject:
   - component: {fileID: 8098551834288890181}
   - component: {fileID: 2828720510129443954}
   - component: {fileID: 810748465083417042}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Gatto
   m_TagString: Untagged
   m_Icon: {fileID: 0}

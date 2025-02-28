@@ -125,6 +125,8 @@ MonoBehaviour:
   moveDistance: 2
   moveSpeed: 7
   jumpHeight: 1
+  audioSource: {fileID: 0}
+  moveSound: {fileID: 8300000, guid: 47e0ee8d0a731d64f88a45eedd0ef9a1, type: 3}
 --- !u!114 &5518006965328950134
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -152,6 +154,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinText: {fileID: 0}
+  selectableLayer:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!114 &1888816488584414459
 MonoBehaviour:
   m_ObjectHideFlags: 0

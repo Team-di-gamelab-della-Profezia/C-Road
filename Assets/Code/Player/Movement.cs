@@ -10,6 +10,9 @@ public class Movement : MonoBehaviour
     private float jumpTime = 0f;
     private Rigidbody rb;
 
+    public AudioSource audioSource;          // Riferimento all'AudioSource
+    public AudioClip moveSound;             // Suono del movimento
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -47,6 +50,7 @@ public class Movement : MonoBehaviour
             }
         }
         StartJump(direction);
+        PlayMoveSound();  // Riproduce il suono del movimento ogni volta che il giocatore salta
     }
 
     void StartJump(Vector3 direction)
@@ -82,6 +86,15 @@ public class Movement : MonoBehaviour
             }
             rb.position = new Vector3(targetPosition.x, targetPosition.y, targetPosition.z);
             rb.linearVelocity = Vector3.zero;
+        }
+    }
+
+    // Funzione per riprodurre il suono del movimento
+    void PlayMoveSound()
+    {
+        if (audioSource != null && moveSound != null)
+        {
+            audioSource.PlayOneShot(moveSound);  // Riproduce il suono del movimento
         }
     }
 }
